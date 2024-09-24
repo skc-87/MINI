@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active{
+    @apply bg-[#03AED2] text-white rounded-2xl bg-clip-padding;
+
+}
+
+
+
