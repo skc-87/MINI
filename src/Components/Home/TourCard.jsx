@@ -8,7 +8,7 @@ const TourCard = ({ tour }) => {
 
   return (
     <div className="flex flex-col gap-y-[1rem] ">
-      <Link to={`/tour/${tour?._id}`}>
+      <Link to={`/tour/states/${tour?._id}`}>
         <div>
           {/* image */}
           <div>

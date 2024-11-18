@@ -6,22 +6,26 @@ import Tours from "./Pages/Tours";
 import Packages from "./Pages/Pakages";
 import ContactUs from "./Pages/ContactUs";
 import AboutUs from "./Pages/AboutUs";
-import { Routes, Route } from'react-router-dom';
+import { Routes, Route } from "react-router-dom";
 import TourDetails from "./Pages/TourDetails";
+import SearchDestination from "./Components/Search/SearchDestination";
+import States from "./Pages/States.jsx"
+
+
 
 function App() {
-
-
-  const user = localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")) : null;
-
+  const user = localStorage.getItem("user")
+    ? JSON.parse(localStorage.getItem("user"))
+    : null;
 
   return (
     <div className="text-center text-4xl w-full h-full ">
       <div className="flex flex-col items-center mx-auto w-11/12 mt-[1rem] mb-5">
         {/* Navbar */}
-     <Navbar/>
+        <Navbar />
       </div>
 
+      {/* <SearchDestination /> */}
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -30,10 +34,10 @@ function App() {
         <Route path="/Aboutus" element={<AboutUs />} />
         <Route path="/contact us" element={<ContactUs />} />
         <Route path="/tour/:id" element={<TourDetails />} />
+        <Route path="/tour/states/:id" element={<States />} />
       </Routes>
 
       <Footer />
-
     </div>
   );
 }

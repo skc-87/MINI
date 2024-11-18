@@ -31,6 +31,8 @@ import {
   Mousewheel,
   Keyboard,
 } from "swiper/modules"; // Correct import for Autoplay
+import HomeSearch from "../Components/Search/HomeSearch";
+import SearchDestination from "../Components/Search/SearchDestination";
 
 const Home = () => {
   const [tours, setTours] = useState([]);
@@ -84,10 +86,14 @@ const Home = () => {
           {/* <div><img src={HeroBg}/></div> */}
           <div className="text-start mt-[2rem]">
             <p className="text-[1rem]">
-              Popular Place : Bali, Istanbul, Rome, Paris.
+              Popular Place : Udaipur, Assam, Kedarnath ...
             </p>
           </div>
         </div>
+      </div>
+
+      <div className="-mt-[10rem]">
+        <SearchDestination />
       </div>
 
       {/* Explorer section */}
@@ -130,11 +136,11 @@ const Home = () => {
                   key={index}
                   className="  shadow-2xl hover:scale-105 transition-all duration-300  py-[1rem] rounded-xl"
                 >
-
-                  <SwiperSlide className=" ">
-                    <TourCard tour={tour} />
-                  </SwiperSlide>
-                  
+                  {tour.category == "National" && (
+                    <SwiperSlide className=" ">
+                      <TourCard tour={tour} />
+                    </SwiperSlide>
+                  )}
                 </div>
               ))}
             </Swiper>
@@ -143,7 +149,6 @@ const Home = () => {
           )}
         </div>
       </div>
-
       {/* why choose us */}
       <div
         className=" h-[633px] image-fit flex flex-col justify-start items-center gap-y-[5rem]  "
@@ -235,7 +240,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
       {/* our parteners */}
       <div className="w-11/12 flex flex-col gap-y-[4rem] mx-auto ">
         {/* text */}

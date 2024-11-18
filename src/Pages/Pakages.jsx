@@ -23,7 +23,7 @@ import {
   Keyboard,
 } from "swiper/modules"; // Correct import for Autoplay
 
-const Package = () => {
+const Packages = () => {
   const [tours, setTours] = useState([]);
 
   const getTours = async () => {
@@ -66,7 +66,7 @@ const Package = () => {
       {/* Tours */}
       <div className="flex flex-col gap-y-[2rem] mt-[5rem] w-[90%] h-auto mx-auto ">
         {/* WORLD TOUR */}
-        <div className="flex flex-col gap-y-[2rem]">
+        {/* <div className="flex flex-col gap-y-[2rem]">
           <p className="text-start font-thin text-[3rem]">International Tour</p>
 
           <div>
@@ -104,7 +104,7 @@ const Package = () => {
               <div></div>
             )}
           </div>
-        </div>
+        </div> */}
 
         {/* National TOUR */}
         <div className="flex flex-col gap-y-[2rem]">
@@ -187,4 +187,4 @@ const Package = () => {
   );
 };
 
-export default Package;
+export default Packages;
