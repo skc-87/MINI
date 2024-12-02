@@ -1,8 +1,8 @@
 import React from "react";
 import Bali from "../../assets/Aboutus/bali.jpg";
-import Dubai from "../../assets/Aboutus/dubai.jpg";
-import Paris from "../../assets/Aboutus/paris.jpg";
-import Italy from "../../assets/Aboutus/italy.jpg";
+import Kedarnath from "../../assets/Aboutus/Kedarnath.jpeg"
+import Valley from "../../assets/Aboutus/Valley.jpeg"
+import Temple from "../../assets/Aboutus/Temple.jpeg"
 
 const Content3 = () => {
   return (
@@ -15,32 +15,29 @@ const Content3 = () => {
         <div className="mb-[2rem] text-[3rem] font-bold">
           <p>Unforgettable moments</p>
         </div>
-        
+
         {/* pictures div */}
         <div className="flex h-[676px] gap-x-5">
           {/* left */}
           <div
-        className="rounded-2xl hover:scale-105 transition-all duration-300 flex relative"
-        style={{
-          backgroundImage: `url(${Bali})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          minHeight: "676px",
-          minWidth: "676px",
-        }}
-      >
-        <div className="absolute bottom-0 left-0 ml-[1rem] mb-[1rem] text-white font-semibold text-">
-          BALI
-        </div>
-
-      </div>
+            className="rounded-2xl hover:scale-105 transition-all duration-300 flex relative"
+            style={{
+              backgroundImage: `url(${Bali})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+              minHeight: "676px",
+              minWidth: "676px",
+            }}
+          >
+            <div className="absolute bottom-0 left-0 ml-[1rem] mb-[1rem] text-white font-semibold text-"></div>
+          </div>
           {/* right */}
           <div className="flex flex-col gap-y-5">
             <div
-            className="rounded-2xl hover:scale-105 transition-all duration-300 flex relative"
+              className="rounded-2xl hover:scale-105 transition-all duration-300 flex relative"
               style={{
-                backgroundImage: `url(${Dubai})`,
+                backgroundImage: `url(${Kedarnath})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
@@ -49,14 +46,14 @@ const Content3 = () => {
               }}
             >
               <div className="absolute bottom-0 left-0 ml-[1rem] mb-[1rem] text-white font-semibold">
-                DUBAI
+                Kedarnath
               </div>
             </div>
             <div className="flex gap-x-5">
               <div
-              className="rounded-2xl hover:scale-105 transition-all duration-300 flex relative"
+                className="rounded-2xl hover:scale-105 transition-all duration-300 flex relative"
                 style={{
-                  backgroundImage: `url(${Paris})`,
+                  backgroundImage: `url(${Valley})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
@@ -65,13 +62,13 @@ const Content3 = () => {
                 }}
               >
                 <div className="absolute bottom-0 left-0 ml-[1rem] mb-[1rem] text-white font-semibold">
-                PARIS
-              </div>
+                  Shimla
+                </div>
               </div>
               <div
-              className="rounded-2xl  hover:scale-105 transition-all duration-300 felx relative"
+                className="rounded-2xl  hover:scale-105 transition-all duration-300 felx relative"
                 style={{
-                  backgroundImage: `url(${Italy})`,
+                  backgroundImage: `url(${Temple})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
@@ -80,8 +77,8 @@ const Content3 = () => {
                 }}
               >
                 <div className="absolute bottom-0 left-0 ml-[1rem] mb-[1rem] text-white font-semibold">
-                ITALY
-              </div>
+                  Tirupati
+                </div>
               </div>
             </div>
           </div>

@@ -10,7 +10,7 @@ import { Routes, Route } from "react-router-dom";
 import TourDetails from "./Pages/TourDetails";
 import SearchDestination from "./Components/Search/SearchDestination";
 import States from "./Pages/States.jsx"
-
+// import { Routes,Route } from "react-router-dom";
 
 
 function App() {

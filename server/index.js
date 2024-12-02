@@ -27,7 +27,7 @@ app.use(
 );
 
 // connect with dataBase
-database.connect();
+database.connect(); 
 
 // default routes
 app.get("/", (req, res) => {
