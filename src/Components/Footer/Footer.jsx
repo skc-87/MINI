@@ -5,6 +5,7 @@ import { SlSocialFacebook } from "react-icons/sl";
 import { CiTwitter } from "react-icons/ci";
 import { AiOutlineYoutube } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import Footer1 from "./Footer1/Footer1";
 
 const Footer = () => {
   return (
@@ -46,96 +47,16 @@ const Footer = () => {
         </form>
       </div>
 
-      <div className="flex justify-between w-11/12 mt-[2rem]">
-        {/* Contact Information */}
-        <div className="flex flex-col">
-          <p className="text-[2rem] font-bold tracking-widest">
-            Contact Information
-          </p>
-          <p className="text-[1rem] font-thin tracking-widest">
-            Email: TourAndTravel@gmail.com
-          </p>
-          <p className="text-[1rem] font-thin tracking-widest">
-            Address: Rungta R1, BHILAI
-          </p>
+     
 
-          <p className="text-[1rem] font-thin tracking-widest">
-            Phone: 81xxxxxx65{" "}
-          </p>
-        </div>
-
-        {/* Quick Links */}
-        <div className="flex flex-col">
-          <p className="text-[2rem] font-bold tracking-widest">Quick Links</p>
-          <div className="flex flex-col gap-y-4 ">
-            <ul>
-              <li className="hover:scale-95 transition-all duration-300">
-                <a href="/" className="text-[1rem] font-thin tracking-widest">
-                  Home
-                </a>
-              </li>
-              <li className="hover:scale-95 transition-all duration-300">
-                <a
-                  href="/aboutus"
-                  className="text-[1rem] font-thin tracking-widest"
-                >
-                  About Us
-                </a>
-              </li>
-              <li className="hover:scale-95 transition-all duration-300">
-                <a
-                  href="/packages"
-                  className="text-[1rem] font-thin tracking-widest"
-                >
-                  Package
-                </a>
-              </li>
-              <li className="hover:scale-95 transition-all duration-300">
-                <a
-                  href="/contact us"
-                  className="text-[1rem] font-thin tracking-widest "
-                >
-                  Contact Us
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Follow Us */}
-        <div>
-          <h4 className="text-lg font-bold mb-2">Follow Us</h4>
-          <div className="flex items-center justify-center mx-auto gap-x-2">
-            <div className="hover:scale-110 transition-all duration:150  cursor-pointer">
-              <Link to="/">
-                <SlSocialFacebook />
-              </Link>
-            </div>
-            <div className="hover:scale-110 transition-all duration:150  cursor-pointer">
-              <Link to="/">
-                <CiTwitter />
-              </Link>
-            </div>
-            <div className="hover:scale-110 transition-all duration:150  cursor-pointer">
-              <Link to="/">
-                <AiOutlineYoutube />
-              </Link>
-            </div>
-            <div className="hover:scale-110 transition-all duration:150  cursor-pointer">
-              <Link to="/">
-                <PiInstagramLogoLight />
-              </Link>
-            </div>
-          </div>
-        </div>
+      <div className="flex justify-between w-full h-full">
+        <Footer1 />
+        {/* <div className="flex justify-between w-11/12 mt-[2rem]"> */}
+        {/* <div className="flex gap-x-4"> */}
+        {/* <img src={Logo} alt="Logo" className="w-[100px]" /> */}
       </div>
 
-      <div className="w-full flex items-center justify-center h-[70px] mt-2 bg-black">
-        <p className="text-gray-200 tracking-widest text-[1rem] text-center">
-          Copyright © All rights reserved (Website Developed & Managed by
-          creativechroma)
-        </p>
-      </div>
+      
     </div>
   );
 };
