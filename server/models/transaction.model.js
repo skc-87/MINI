@@ -1,4 +1,4 @@
-import { mongoose } from "mongoose";
+const mongoose = require("mongoose");
 
 const transactionSchema = new mongoose.Schema(
     {
@@ -23,12 +23,13 @@ const transactionSchema = new mongoose.Schema(
         status: {
             type: String,
             required: true,
-        }
+        },
     },
     {
-        timestamps: true
+        timestamps: true, // Automatically adds createdAt and updatedAt fields
     }
-)
+);
 
+const Transaction = mongoose.model("Transaction", transactionSchema);
 
-export const Transaction = mongoose.model("Transaction", transactionSchema);
+module.exports = Transaction;

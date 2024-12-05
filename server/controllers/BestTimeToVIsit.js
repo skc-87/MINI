@@ -1,5 +1,5 @@
-const BestTimeToVisit = require("../models/BestTimeToVisit")
-const Tour = require("../models/Tours")
+const BestTimeToVisit = require("../models/BestTimeToVisit.js")
+const Tour = require("../models/Tours.js")
 require("dotenv").config();
 
 

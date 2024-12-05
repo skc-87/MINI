@@ -9,9 +9,14 @@ import AboutUs from "./Pages/AboutUs";
 import { Routes, Route } from "react-router-dom";
 import TourDetails from "./Pages/TourDetails";
 import SearchDestination from "./Components/Search/SearchDestination";
-import States from "./Pages/States.jsx"
+import States from "./Pages/States.jsx";
 // import { Routes,Route } from "react-router-dom";
-
+import CreateWallet from "./Components/Wallet/createWallet.jsx";
+import LogIn from "./Components/Auth/LogIn.jsx";
+import SignUp from "./Components/Auth/SignUp.jsx";
+import BookingPage from "./Pages/BookingPage.jsx";
+import PackagesDetails from "./Pages/PackageDetails.jsx";
+// import BillingPackage from "./Pages/BillingPackages.jsx";
 
 function App() {
   const user = localStorage.getItem("user")
@@ -24,19 +29,20 @@ function App() {
         {/* Navbar */}
         <Navbar />
       </div>
-
       {/* <SearchDestination /> */}
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/tours" element={<Tours />} />
-        <Route path="/packages" element={<Packages />} />
+        {/* <Route path="/packages" element={<Packages />} /> */}
         <Route path="/Aboutus" element={<AboutUs />} />
         <Route path="/contact us" element={<ContactUs />} />
         <Route path="/tour/:id" element={<TourDetails />} />
         <Route path="/tour/states/:id" element={<States />} />
+        <Route path="/packages/booking/:price" element={<BookingPage />} />
+        <Route path="/packages" element={<PackagesDetails />} />
       </Routes>
-
+      {/* <CreateWallet /> */}
+      
       <Footer />
     </div>
   );

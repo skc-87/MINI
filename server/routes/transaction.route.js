@@ -1,29 +1,25 @@
-import { Router } from "express";
-import { verify } from "../middlewares/auth.middleware.js";
-import { createWallet, depositMoney, deductMoney, depositMoneyToBank } from "../controllers/transaction.controller.js";
+const express = require("express");
+const { auth } = require("../middlewares/auth.js");
+const {
+  createWallet,
+  depositMoney,
+  deductMoney,
+  depositMoneyToBank,
+} = require("../controllers/transaction.controller.js");
 
+const router = express.Router();
 
-const router = Router();
-
-
+console.log("Inside transaction routes");
 // create wallet
-router.route("/create-wallet").post(verify, createWallet);
-
-
+router.post("/create-wallet", auth, createWallet);
 
 // deposit money
-router.route("/deposit-money").post(verify, depositMoney);
-
-
+router.post("/deposit-money", depositMoney);
 
 // deduct money
-router.route("/deduct-money").post(verify, deductMoney);
-
-
+router.post("/deduct-money", deductMoney);
 
 // deposit money to bank
-router.route("/deposit-money-to-bank").post(verify, depositMoneyToBank);
+router.post("/deposit-money-to-bank", depositMoneyToBank);
 
-
-
-export default router;
+module.exports = router;

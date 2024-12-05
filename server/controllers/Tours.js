@@ -1,7 +1,7 @@
 const Tours = require("../models/Tours");
 const Category = require("../models/Category");
 require("dotenv").config();
-const { uploadImageToCloudinary } = require("../utils/imageUploader");
+const uploadImageToCloudinary  = require("../utils/cloudinary.js");
 
 // create tours
 exports.createTours = async (req, res) => {

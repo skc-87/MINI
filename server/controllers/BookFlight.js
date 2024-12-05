@@ -1,4 +1,4 @@
-const BookFlight = require("../models/BookFlight")
+const BookFlight = require("../models/BookFlight.js")
 require("dotenv").config();
 
 

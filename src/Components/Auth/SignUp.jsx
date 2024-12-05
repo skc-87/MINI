@@ -50,13 +50,13 @@ const SignUp = () => {
   };
 
   return (
-    <div className=" max-h-[595px] w-[500px] bg-white bg-opacity-5 backdrop-blur-xl rounded-3xl p-4 border-gray border-2">
+    <div className=" max-h-[595px] w-[500px] bg-opacity-50 backdrop-blur-md rounded-3xl p-4 border-gray border-2">
       <h2 className="font-bold text-white">Sign Up</h2>
       <form onSubmit={handleSubmit} className="mt-10 ">
         {/* first and last name */}
         <div className="flex gap-x-5">
-          <div>
-            <label className="text-white text-lg ">First Name</label>
+          <div className="flex flex-col items-start mb-3">
+            <label className="text-white text-lg">First Name</label>
             <input
               type="text"
               name="firstName"
@@ -67,7 +67,7 @@ const SignUp = () => {
             />
           </div>
 
-          <div>
+          <div className="flex flex-col items-start mb-3">
             <label className="text-white text-lg">Last Name</label>
             <input
               type="text"
@@ -80,7 +80,7 @@ const SignUp = () => {
           </div>
         </div>
 
-        <div>
+        <div className="flex flex-col items-start mb-3">  
           <label className="text-white  text-lg">Email</label>
           <input
             type="email"
@@ -93,7 +93,7 @@ const SignUp = () => {
         </div>
 
         {/* Other input fields */}
-        <div>
+        <div className="flex flex-col items-start mb-3">  
           <label className="text-white text-lg">Contact Number</label>
           <input
             type="tel"

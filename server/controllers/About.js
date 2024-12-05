@@ -1,5 +1,5 @@
-const About = require("../models/About")
-const Tour = require("../models/Tours")
+const About = require("../models/About.js")
+const Tour = require("../models/Tours.js")
 require("dotenv").config();
 
 

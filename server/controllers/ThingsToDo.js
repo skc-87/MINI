@@ -1,6 +1,6 @@
 const ThingsToDo = require("../models/ThingsToDo")
 require("dotenv").config();
-const { uploadImageToCloudinary } = require("../utils/imageUploader")
+const uploadImageToCloudinary = require("../utils/cloudinary.js")
 const Tours = require("../models/Tours")
 
 

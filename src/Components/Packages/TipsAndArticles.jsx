@@ -3,7 +3,7 @@ import TipsAndArticleBanner from "../../assets/Packages/TipsAndArticlesBanner.pn
 
 const TipsAndArticles = () => {
   return (
-    <div className="flex justify-evenly  w-11/12  ">
+    <div className="flex justify-evenly  w-11/12 text-black ">
       {/* left */}
       <div className="w-[60%] ">
         <div className=" flex-col ">

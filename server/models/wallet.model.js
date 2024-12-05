@@ -1,15 +1,16 @@
-import mongoose, { Schema } from "mongoose";
+const mongoose = require("mongoose");
+const { Schema } = mongoose;
 
 const walletSchema = new Schema(
     {
         owner: {
             type: mongoose.Schema.Types.ObjectId,
             ref: "User",
-            required: true
+            required: true,
         },
         bankAccount: {
             type: String,
-            required: true
+            required: true,
         },
         identificationType: {
             type: String,
@@ -17,28 +18,30 @@ const walletSchema = new Schema(
         },
         identificationNumber: {
             type: Number,
-            required: true
+            required: true,
         },
         balance: {
             type: Number,
-            default: 0
+            default: 0,
         },
         coins: {
             type: Number,
-            default: 0
+            default: 0,
         },
         transactions: {
             type: mongoose.Schema.Types.ObjectId,
-            ref: "Transaction"
+            ref: "Transaction",
         },
         description: {
-            type: String,
-            required: true
-        }
+            type: String, 
+            required: true,
+        },
     },
     {
-        timestamps: true
+        timestamps: true, // Automatically adds createdAt and updatedAt fields
     }
-)
+);
 
-export const Wallet = mongoose.model("Wallet", walletSchema)
+const Wallet = mongoose.model("Wallet", walletSchema);
+
+module.exports = Wallet;

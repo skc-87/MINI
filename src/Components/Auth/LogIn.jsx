@@ -26,7 +26,7 @@ const LogIn = () => {
     e.preventDefault();
     console.log(formData);
     dispatch(login(formData.contactNumber, formData.otp),navigate);
-    navigate("/tours")
+    // navigate("/tours")
   };
 
   const handleSendOtp = () => {
@@ -38,10 +38,10 @@ const LogIn = () => {
   };
 
   return (
-    <div className="max-h-[595px] w-[400px] bg-white bg-opacity-5 backdrop-blur-xl rounded-3xl p-4  border-gray border-2 ">
+    <div className="max-h-[595px] w-[400px] bg-opacity-50 backdrop-blur-md rounded-3xl p-4  border-gray border-2 ">
       <h2 className="font-bold text-white">Login</h2>
       <form onSubmit={handleSubmit} className="mt-10 ">
-        <div className="">
+      <div className="flex flex-col items-start mb-3">
           <label className="text-white text-lg">Contact Number</label>
           <input
             type="tel"
@@ -64,7 +64,7 @@ const LogIn = () => {
           </button>
         </div>
 
-        <div>
+        <div >
           <label className="text-white text-lg">OTP</label>
           <br />
           <input

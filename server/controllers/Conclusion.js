@@ -1,4 +1,4 @@
-const Conclusion = require("../models/Conclusion");
+const Conclusion = require("../models/Conclusion.js");
 require("dotenv").config();
 
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
-import { useParams } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
 
 import { useSelector } from "react-redux";
 
@@ -9,30 +9,15 @@ import Skeleton from "react-loading-skeleton";
 
 import { getToursById } from "../services/operations/tourAPI";
 
-
-import Room1 from "../assets/Packages/room-1.jpg"
-import Room2 from "../assets/Packages/room-2.jpg"
-import Room3 from "../assets/Packages/room-3.jpg"
-
-
-
+import Room1 from "../assets/Packages/room-1.jpg";
+import Room2 from "../assets/Packages/room-2.jpg";
+import Room3 from "../assets/Packages/room-3.jpg";
 
 const States = () => {
-  // const user = localStorage.getItem("user")
-  //   ? JSON.parse(localStorage.getItem("user"))
-  //   : null;
-  // console.log("USer -> ", user);
-  // const token = user?.token;
-
-  // const [userActive,setUserActive] = useState();
-
-  // useEffect(() => {
-  //   setUserActive(user);
-  // },[user])
-
   const user = useSelector((state) => state.profile.user);
-  console.log("User -> ", user);
+  // console.log("User -> ", user);
   const token = user?.token;
+  const navigate = useNavigate();
 
   const [userActive, setUserActive] = useState(false);
 
@@ -76,7 +61,7 @@ const States = () => {
 
   return (
     <div
-      className={`w-full h-auto pb-[5rem] bg-gray-300 
+      className={`w-full   pb-[5rem] bg-gray-300 
      
       `}
 
@@ -166,7 +151,7 @@ const States = () => {
           </div>
 
           {/* Room 2 */}
-             <div className="shadow-lg rounded-lg overflow-hidden bg-slate-200 hover:scale-105 transition-all duration-200">
+          <div className="shadow-lg rounded-lg overflow-hidden bg-slate-200 hover:scale-105 transition-all duration-200">
             <img src={Room2} alt="room" className="w-full" />
             <div className="bg-white p-4 flex items-center justify-between -translate-y-1/2 mx-4 rounded-lg shadow-lg">
               <div>
@@ -184,7 +169,7 @@ const States = () => {
           </div>
 
           {/* Room 3 */}
-              <div className="shadow-lg rounded-lg overflow-hidden bg-slate-200 hover:scale-105 transition-all duration-200">
+          <div className="shadow-lg rounded-lg overflow-hidden bg-slate-200 hover:scale-105 transition-all duration-200">
             <img src={Room3} alt="room" className="w-full" />
             <div className="bg-white p-4 flex items-center justify-between -translate-y-1/2 mx-4 rounded-lg shadow-lg">
               <div>
@@ -203,8 +188,41 @@ const States = () => {
           </div>
         </div>
       </section>
+
+      
+      <div>
+        <button
+          className="mt-2 px-2 bg-blue-500 hover:bg-blue-600 hover:scale-95 text-white font-medium py-2 rounded-lg transition duration-300"
+          onClick={() => navigate("/packages/booking/4999")}
+        >
+          Book for ₹4999
+        </button>
+      </div>
     </div>
   );
 };
 
 export default States;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

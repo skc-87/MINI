@@ -33,7 +33,6 @@ export function sendOtp(contactNumber) {
     }
     // dispatch(setLoading(false));
     toast.dismiss(toastId);
-   
   };
 }
 
@@ -68,7 +67,7 @@ export function signUp(firstName, lastName, contactNumber, email, otp) {
 }
 
 export function login(contactNumber, otp) {
-  return async (dispatch,navigate) => {
+  return async (dispatch, navigate) => {
     const toastId = toast.loading("Loading...");
 
     try {
@@ -83,16 +82,20 @@ export function login(contactNumber, otp) {
         throw new Error(response.data.message);
       }
 
+      const accessToken = response?.data?.accessToken;
+
+      console.log("Access Token -> ", accessToken);
+
       // toast.success("Login Successfully");
-      dispatch(setToken(response?.data?.token));
+      // dispatch(setToken(response?.data?.token));
 
-      localStorage.setItem("token", JSON.stringify(response?.data?.token));
+      localStorage.setItem("token", JSON.stringify(accessToken));
 
-      dispatch(setUser(response?.data?.user));
+      dispatch(setUser(response?.data?.data?.loggedInUser));
 
       console.log("User loggded in successfully");
       toast.success("Login successfully");
-      navigate("/tours")
+      // navigate("/tours")
     } catch (e) {
       console.log("LOGIn API Error ->", e);
       toast.error("Login failed...");
@@ -115,7 +118,7 @@ export function logout(token) {
       localStorage.removeItem("user");
       toast.success("Logged Out");
       // navigate("/");
-    } else{
+    } else {
       toast.error("You are not logged in");
     }
   };
